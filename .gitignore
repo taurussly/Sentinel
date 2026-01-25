@@ -59,27 +59,92 @@ ENV/
 env.bak/
 venv.bak/
 
-# IDE
+# IDEs and Editors
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
+*.sublime-project
+*.sublime-workspace
+.spyproject/
+.ropeproject/
 
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
 # Sentinel specific
 sentinel_logs/
 sentinel_state.json
 *.jsonl
 
-# Secrets
+# Secrets and credentials
 .env
 .env.local
+.env.*.local
 *.pem
 *.key
+secrets.yaml
+secrets.json
 
-# Claude Code
+# =============================================================================
+# AI Coding Assistants - Ignore local configs from all contributors' tools
+# =============================================================================
+# Claude
 .claude/
-CLAUDE.md
+claude_config.json
+
+# Cursor
+.cursor/
+.cursorconfig
+.cursorrules
+
+# GitHub Copilot
+.copilot/
+.github/copilot/
+
+# Aider
+.aider/
+.aider.conf.yml
+.aider.input.history
+.aider.chat.history.md
+
+# Codeium
+.codeium/
+
+# Tabnine
+.tabnine/
+
+# Amazon CodeWhisperer / Q
+.aws/codewhisperer/
+.amazonq/
+
+# JetBrains AI Assistant
+.junie/
+
+# Sourcegraph Cody
+.cody/
+.sourcegraph/
+
+# Continue.dev
+.continue/
+.continuerc.json
+
+# Windsurf
+.windsurf/
+
+# Replit AI
+.replit
+replit.nix
+
+# Other AI tools (catch-all for future assistants)
+.ai/
+.llm/
+.assistant/
