@@ -161,6 +161,8 @@ Open `http://localhost:8501`:
 - View audit history and metrics
 - Track "Value Protected" across your org
 
+**Track your protection metrics**: The dashboard shows "Total Value Protected" - the sum of all transactions that required approval. Use this metric to demonstrate ROI to stakeholders and justify governance investments.
+
 ---
 
 ## Anomaly Detection
@@ -262,6 +264,19 @@ A security product that fails open isn't a security product.
 - **Healthcare**: Verify before prescription changes
 - **Legal**: Review before contract modifications
 - **SaaS**: Reduce impulsive cancellations
+
+---
+
+## Early Adopters
+
+Sentinel is being used to protect AI agents in:
+
+- 🏦 Financial services automation
+- 📧 Customer communication workflows
+- 🔧 DevOps and infrastructure management
+- 📊 Data pipeline operations
+
+*Want to be featured here? [Open an issue](https://github.com/Saladinha/Sentinel/issues) and tell us your use case!*
 
 ---
 
