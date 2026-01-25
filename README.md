@@ -82,7 +82,17 @@ Approve? [y/n]: _
 ### Installation
 
 ```bash
-pip install sentinel-ai
+# Install from PyPI (recommended)
+pip install agentic-sentinel
+
+# Or install from GitHub
+pip install git+https://github.com/azdhril/Sentinel.git
+
+# With dashboard support
+pip install agentic-sentinel[dashboard]
+
+# With LangChain support
+pip install agentic-sentinel[langchain]
 ```
 
 ### Basic Usage
@@ -150,7 +160,7 @@ agent = create_openai_tools_agent(llm, protected_tools, prompt)
 Start the visual command center:
 
 ```bash
-pip install sentinel-ai[dashboard]
+pip install agentic-sentinel[dashboard]
 python -m sentinel.dashboard
 ```
 
@@ -276,7 +286,7 @@ Sentinel is being used to protect AI agents in:
 - 🔧 DevOps and infrastructure management
 - 📊 Data pipeline operations
 
-*Want to be featured here? [Open an issue](https://github.com/Saladinha/Sentinel/issues) and tell us your use case!*
+*Want to be featured here? [Open an issue](https://github.com/azdhril/Sentinel/issues) and tell us your use case!*
 
 ---
 
@@ -325,8 +335,8 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ```bash
 # Clone and install dev dependencies
-git clone https://github.com/Saladinha/Sentinel.git
-cd sentinel
+git clone https://github.com/azdhril/Sentinel.git
+cd Sentinel
 pip install -e ".[dev]"
 
 # Run tests
@@ -348,7 +358,7 @@ MIT License. Use it, fork it, sell it. Just don't blame us if your AI still does
 
 Need custom integration, SLA, or compliance features?
 
-**[Open an Issue →](https://github.com/Saladinha/Sentinel/issues)**
+**[Open an Issue →](https://github.com/azdhril/Sentinel/issues)**
 
 ---
 
@@ -358,6 +368,6 @@ Need custom integration, SLA, or compliance features?
 
 <p align="center">
   <a href="#quick-start">Get Started</a> •
-  <a href="https://saladinha.github.io/Sentinel">Documentation</a> •
-  <a href="https://github.com/Saladinha/Sentinel/issues">Report Bug</a>
+  <a href="https://azdhril.github.io/Sentinel">Documentation</a> •
+  <a href="https://github.com/azdhril/Sentinel/issues">Report Bug</a>
 </p>

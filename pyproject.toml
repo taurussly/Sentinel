@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sentinel-ai"
+name = "agentic-sentinel"
 version = "0.1.0"
 description = "Agent Governance Layer - Middleware for AI agent action control"
 readme = "README.md"
@@ -52,10 +52,10 @@ dashboard = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Saladinha/Sentinel"
-Documentation = "https://saladinha.github.io/Sentinel"
-Repository = "https://github.com/Saladinha/Sentinel"
-Issues = "https://github.com/Saladinha/Sentinel/issues"
+Homepage = "https://github.com/azdhril/Sentinel"
+Documentation = "https://azdhril.github.io/Sentinel"
+Repository = "https://github.com/azdhril/Sentinel"
+Issues = "https://github.com/azdhril/Sentinel/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

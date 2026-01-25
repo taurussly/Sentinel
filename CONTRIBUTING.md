@@ -10,7 +10,7 @@ Be respectful. Be constructive. We're all here to build something useful.
 
 ### Reporting Bugs
 
-1. Check if the bug was already reported in [Issues](https://github.com/Saladinha/Sentinel/issues)
+1. Check if the bug was already reported in [Issues](https://github.com/azdhril/Sentinel/issues)
 2. If not, create a new issue with:
    - Clear title
    - Steps to reproduce
@@ -38,7 +38,7 @@ Open an issue with the `[Feature]` prefix. Describe:
 
 ```bash
 # Clone your fork
-git clone https://github.com/Saladinha/Sentinel.git
+git clone https://github.com/azdhril/Sentinel.git
 cd sentinel
 
 # Create virtual environment
