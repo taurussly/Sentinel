@@ -3,6 +3,8 @@
 Sentinel is a middleware for AI agent governance that intercepts,
 analyzes, and controls actions before they cause irreversible side effects.
 
+Environment variables are automatically loaded from .env file if present.
+
 Example:
     >>> from sentinel import protect, SentinelConfig
     >>>
@@ -23,6 +25,10 @@ Anomaly Detection:
     ...     anomaly_llm=False,  # LLM detector (optional, premium)
     ... )
 """
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from sentinel.core.exceptions import (
     SentinelBlockedError,

@@ -282,6 +282,28 @@ A security product that fails open isn't a security product.
 
 ---
 
+## Configuration
+
+Sentinel can be configured via environment variables. Copy the example file:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` with your values. Key variables:
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `SENTINEL_LOG_DIR` | `./sentinel_logs` | Directory for audit logs |
+| `SENTINEL_FAIL_MODE` | `secure` | `secure` (block on error) or `safe` (allow on error) |
+| `SENTINEL_WEBHOOK_URL` | - | URL for webhook approval requests |
+| `SENTINEL_WEBHOOK_TOKEN` | - | Auth token for webhook |
+| `OPENAI_API_KEY` | - | For LLM anomaly detection (optional) |
+
+See `.env.example` for all available options.
+
+---
+
 ## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
