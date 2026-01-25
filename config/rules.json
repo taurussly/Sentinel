@@ -1,0 +1,59 @@
+{
+  "$schema": "./rules.schema.json",
+  "version": "1.0",
+  "default_action": "allow",
+  "rules": [
+    {
+      "id": "financial_limit",
+      "name": "Limite Financeiro",
+      "description": "Requer aprovacao para transferencias acima de $100",
+      "function_pattern": "transfer_*",
+      "conditions": [
+        {
+          "param": "amount",
+          "operator": "gt",
+          "value": 100
+        }
+      ],
+      "action": "require_approval",
+      "priority": 10,
+      "message": "Transferencia acima de $100 requer aprovacao"
+    },
+    {
+      "id": "block_dangerous",
+      "name": "Bloquear Acoes Perigosas",
+      "description": "Bloqueia todas as acoes de delecao",
+      "function_pattern": "delete_*",
+      "conditions": [],
+      "action": "block",
+      "priority": 1,
+      "message": "Acoes de delecao estao bloqueadas"
+    },
+    {
+      "id": "high_value_purchase",
+      "name": "Compra de Alto Valor",
+      "description": "Requer aprovacao para compras acima de $500",
+      "function_pattern": "purchase_*",
+      "conditions": [
+        {
+          "param": "amount",
+          "operator": "gt",
+          "value": 500
+        }
+      ],
+      "action": "require_approval",
+      "priority": 10,
+      "message": "Compra acima de $500 requer aprovacao"
+    },
+    {
+      "id": "external_api_calls",
+      "name": "Chamadas de API Externa",
+      "description": "Requer aprovacao para chamadas a APIs externas",
+      "function_pattern": "call_external_*",
+      "conditions": [],
+      "action": "require_approval",
+      "priority": 50,
+      "message": "Chamadas a APIs externas requerem aprovacao"
+    }
+  ]
+}

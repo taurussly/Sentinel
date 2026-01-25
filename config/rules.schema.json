@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sentinel.dev/schemas/rules.schema.json",
+  "title": "Sentinel Rules Schema",
+  "description": "Schema for Sentinel governance rules configuration",
+  "type": "object",
+  "required": ["version", "rules"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Schema version (e.g., '1.0')"
+    },
+    "default_action": {
+      "type": "string",
+      "enum": ["allow", "block", "require_approval"],
+      "default": "allow",
+      "description": "Default action when no rules match"
+    },
+    "rules": {
+      "type": "array",
+      "description": "List of governance rules",
+      "items": {
+        "$ref": "#/definitions/rule"
+      }
+    }
+  },
+  "definitions": {
+    "rule": {
+      "type": "object",
+      "required": ["id", "name", "function_pattern", "action"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Unique identifier for the rule (snake_case)"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Human-readable name for the rule"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Detailed description of what the rule does"
+        },
+        "function_pattern": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Glob pattern to match function names (e.g., 'transfer_*', '*_delete')"
+        },
+        "conditions": {
+          "type": "array",
+          "description": "List of conditions that must all be true for the rule to trigger",
+          "default": [],
+          "items": {
+            "$ref": "#/definitions/condition"
+          }
+        },
+        "action": {
+          "type": "string",
+          "enum": ["allow", "block", "require_approval"],
+          "description": "Action to take when rule matches"
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "default": 100,
+          "description": "Rule priority (lower number = higher priority)"
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Message to display when rule triggers"
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether the rule is active"
+        }
+      }
+    },
+    "condition": {
+      "type": "object",
+      "required": ["param", "operator", "value"],
+      "properties": {
+        "param": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the function parameter to check"
+        },
+        "operator": {
+          "type": "string",
+          "enum": ["eq", "ne", "gt", "gte", "lt", "lte", "contains", "not_contains", "matches", "in", "not_in"],
+          "description": "Comparison operator"
+        },
+        "value": {
+          "description": "Value to compare against (type depends on operator)"
+        }
+      }
+    }
+  }
+}

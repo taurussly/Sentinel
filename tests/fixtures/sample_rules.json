@@ -1,0 +1,75 @@
+{
+  "$schema": "../../config/rules.schema.json",
+  "version": "1.0",
+  "default_action": "allow",
+  "rules": [
+    {
+      "id": "test_financial_limit",
+      "name": "Test Financial Limit",
+      "function_pattern": "transfer_*",
+      "conditions": [
+        {
+          "param": "amount",
+          "operator": "gt",
+          "value": 100
+        }
+      ],
+      "action": "require_approval",
+      "priority": 10,
+      "message": "Transfer above $100 requires approval"
+    },
+    {
+      "id": "test_block_delete",
+      "name": "Test Block Delete",
+      "function_pattern": "delete_*",
+      "conditions": [],
+      "action": "block",
+      "priority": 1,
+      "message": "Delete actions are blocked"
+    },
+    {
+      "id": "test_allow_read",
+      "name": "Test Allow Read",
+      "function_pattern": "read_*",
+      "conditions": [],
+      "action": "allow",
+      "priority": 100,
+      "message": "Read actions are allowed"
+    },
+    {
+      "id": "test_conditional_block",
+      "name": "Test Conditional Block",
+      "function_pattern": "send_email",
+      "conditions": [
+        {
+          "param": "to",
+          "operator": "contains",
+          "value": "@competitor.com"
+        }
+      ],
+      "action": "block",
+      "priority": 5,
+      "message": "Cannot send emails to competitor domain"
+    },
+    {
+      "id": "test_multiple_conditions",
+      "name": "Test Multiple Conditions",
+      "function_pattern": "execute_trade",
+      "conditions": [
+        {
+          "param": "amount",
+          "operator": "gt",
+          "value": 1000
+        },
+        {
+          "param": "market",
+          "operator": "eq",
+          "value": "crypto"
+        }
+      ],
+      "action": "require_approval",
+      "priority": 15,
+      "message": "Crypto trades above $1000 require approval"
+    }
+  ]
+}
