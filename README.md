@@ -288,7 +288,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ```bash
 # Clone and install dev dependencies
-git clone https://github.com/yourusername/sentinel.git
+git clone https://github.com/Saladinha/Sentinel.git
 cd sentinel
 pip install -e ".[dev]"
 
@@ -311,7 +311,7 @@ MIT License. Use it, fork it, sell it. Just don't blame us if your AI still does
 
 Need custom integration, SLA, or compliance features?
 
-**[Contact Us →](mailto:enterprise@sentinel.ai)**
+**[Open an Issue →](https://github.com/Saladinha/Sentinel/issues)**
 
 ---
 
@@ -321,6 +321,6 @@ Need custom integration, SLA, or compliance features?
 
 <p align="center">
   <a href="#quick-start">Get Started</a> •
-  <a href="https://docs.sentinel.ai">Documentation</a> •
-  <a href="https://github.com/yourusername/sentinel/issues">Report Bug</a>
+  <a href="https://saladinha.github.io/Sentinel">Documentation</a> •
+  <a href="https://github.com/Saladinha/Sentinel/issues">Report Bug</a>
 </p>
